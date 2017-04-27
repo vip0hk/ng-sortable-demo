@@ -83,7 +83,16 @@
 	Sortable.create(byId('multi'), {
 		animation: 150,
 		draggable: '.tile',
-		handle: '.tile__name'
+		handle: '.tile__name',
+
+
+		onAdd: function (evt){ console.log('onAdd.foo:', [evt.item, evt.from]); },
+		onUpdate: function (evt){ console.log('onUpdate.foo:', [evt.item, evt.from]); },
+		onRemove: function (evt){ console.log('onRemove.foo:', [evt.item, evt.from]); },
+		onStart:function(evt){ console.log('onStart.foo:', [evt.item, evt.from]);},
+		onSort:function(evt){ console.log('onStart.foo:', [evt.item, evt.from]);},
+		onEnd: function(evt){ console.log('onEnd.foo:', [evt.item, evt.from]);}
+		
 	});
 
 	[].forEach.call(byId('multi').getElementsByClassName('tile__list'), function (el){
