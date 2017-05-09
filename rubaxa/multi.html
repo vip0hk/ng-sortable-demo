@@ -6,9 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=0.5"/>
 
-	<link href="ply.css" rel="stylesheet" type="text/css"/>
-	<!-- <link href="//fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css"/> -->
-
 	<link href="app.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
@@ -21,7 +18,7 @@
 
 			<div style="width: 30%; margin-top: -8px; margin-left: 10px; float: left;" class="block__list block__list_words">
 				<div ng-controller="TodoController">
-					<ul ng-sortable="{ group: 'todo', animation: 150 }" class="unstyled" style="min-height: 40px;">
+					<ul ng-sortable="leftConfig" class="unstyled" style="min-height: 40px;">
 						<li ng-repeat="todo in todos">
 							<input type="checkbox" ng-model="todo.done">
 							<span class="done-{{todo.done}}">{{todo.text}}</span>
@@ -49,11 +46,8 @@
 
 
 	<script src="Sortable.js"></script>
-	<!-- <script src="Ply.min.js"></script> -->
 	<script src="angular.min.js"></script>
-	<!-- <script src="ng-sortable.js"></script> -->
 	<script src="angular-legacy-sortable.js"></script>
-
 	<script src="demo.js"></script>
 
 	</body>
